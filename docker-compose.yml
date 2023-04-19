@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  news-backend:
+    build: ./news-aggregator-be
+    env_file:
+      - ./news-aggregator-be/.env
+    ports:
+      - 8000:8000
+
+  news-frontend:
+    build: ./news-aggregator-fe
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
+    depends_on:
+      - news-backend
