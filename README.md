@@ -8,4 +8,4 @@
 
 ### Running the project
 - To run the project, simply execute `docker-compose up -d` after having adding the .env file
-
+- Finally, enjoy the project on http://localhost:3000 🕺
